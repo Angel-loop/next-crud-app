@@ -1,5 +1,6 @@
 import { Schema, model, models } from "mongoose";
 
+
 const taskSchema = new Schema({
     title: {
         type: "string",
@@ -19,5 +20,5 @@ const taskSchema = new Schema({
     timestamps: true,
 })
 
-export default model('task', taskSchema)
+export default models.Task || model('Task', taskSchema)
 
